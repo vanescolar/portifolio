@@ -15,6 +15,7 @@ body {
     color: white;
     min-height: 100vh;
     display: flex;
+    margin: 0;
     flex-direction: column;
     overflow-x: hidden;
 }
@@ -64,6 +65,7 @@ nav a:hover, nav a.active {
 
 /* --- 3. GALERIA DE SERVIÇOS (GRID) --- */
 .services-container {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas automáticas */
     gap: 3rem; /* Espaço entre os cartões */
