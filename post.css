@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "VT323", monospace;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+    min-height: 100vh;
+    /* Removido o Flexbox daqui para evitar que o conteúdo centralize verticalmente */
+}
+
+/* Header Fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo sólido para não confundir com o texto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #6663a6;
+    font-weight: 800;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #6663a6;
+    border-bottom: 2px solid #6663a6;
+}
+
+/* Container do Post - O segredo está aqui */
+.post-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 10rem 5% 5rem; /* 10rem no topo é o espaço para o header */
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.post-title {
+    font-size: 4rem;
+    color: #6663a6;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    font-size: 1.8rem;
+    color: #888;
+}
+
+/* Imagens */
+.featured-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #6663a6;
+    margin-bottom: 3rem;
+}
+
+.post-content {
+    font-size: 2.2rem;
+    color: #eee;
+}
+
+.post-content h2 {
+    color: #6663a6;
+    font-size: 3rem;
+    margin: 3rem 0 1rem;
+}
+
+.post-content p {
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    background: #6663a6;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+footer span {
+    font-size: 1.8rem;
+    color: white;
+}
+
+footer a { color: white; font-weight: bold; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .post-title { font-size: 3rem; }
+    .post-container { padding-top: 12rem; }
+}
+
+.back-link {
+    margin-top: 5rem;
+    padding: 2rem 0;
+    border-top: 1px solid #333; /* Uma linha sutil para separar do texto */
+    text-align: center;
+}
+
+.back-link a {
+    font-size: 2.5rem; /* Aumentado de 2rem para 2.5rem */
+    color: #6663a6;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.back-link a:hover {
+    color: white;
+    transform: translateX(-5px); /* Efeitozinho de deslocamento para a esquerda */
+    text-shadow: 0 0 10px #6663a6;
+}
