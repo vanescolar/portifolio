@@ -53,6 +53,104 @@ nav a:hover, nav a.active {
     border-bottom: 2px solid #6663a6;
 }
 
+ /* Estilos específicos da Página de Post */
+    .post-container {
+        flex: 1;
+        max-width: 800px; /* Largura ideal para leitura de textos */
+        margin: 0 auto;
+        padding-top: 8rem; /* Respiro para o header fixo */
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5rem;
+    }
+
+    .post-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-top: 0;
+    }
+
+    .post-title {
+        font-size: 4.5rem;
+        color: #6663a6;
+        margin-top: 0;    
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+    }
+
+    .post-meta {
+        font-size: 1.8rem;
+        color: #888;
+    }
+
+    .featured-image img {
+        width: 100%;
+        border-radius: 12px;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        border: 2px solid #6663a6;
+        display: block;
+    }
+
+    .post-content {
+        font-size: 2.2rem; 
+        line-height: 1.5;
+        color: #ddd;
+    }
+
+    .post-content h2 {
+        color: #6663a6;
+        font-size: 3rem;
+        margin: 3rem 0 1rem;
+    }
+
+    .post-content p {
+        margin-bottom: 2rem;
+    }
+
+    /* Estilo para imagens dentro do texto */
+    .content-image {
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .content-image img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .image-caption {
+        font-size: 1.6rem;
+        color: #666;
+        margin-top: 1rem;
+    }
+
+    .back-link {
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    .back-link a {
+        font-size: 2rem;
+        color: #6663a6;
+        transition: 0.3s;
+    }
+
+    .back-link a:hover {
+        text-decoration: underline;
+        letter-spacing: 1px;
+    }
+
+    /* Ajuste Responsivo para o Post */
+    @media (max-width: 768px) {
+        .post-title {
+            font-size: 3.5rem;
+        }
+        .post-container {
+            padding-top: 12rem;
+        }
+    }
+
 /* Container do Post*/
 .post-container {
     max-width: 850px;
