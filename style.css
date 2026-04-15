@@ -261,3 +261,22 @@ span{
         margin-top: 4rem;
     }
 }
+
+footer{
+    background: #6663a6;
+    padding: 15px 0;
+    text-align: center;
+    text-align: center;
+    font-family: "VT323", monospace;
+}
+
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+footer .text span a{
+    font-weight: 500;
+    color: whitesmoke;
+}
