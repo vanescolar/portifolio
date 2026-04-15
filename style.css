@@ -64,21 +64,6 @@ nav a.active{
     border-bottom: 3px solid #6663a6;
 }
 
-@media(max-width:995px){
-    nav{
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #6663a6;
-        border-bottom: 3px solid #6663a6;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-    }
-
     nav.active{
         display: block;
     }
@@ -95,7 +80,6 @@ nav a.active{
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #6663a6;
     }
-}
 
 section{
     min-height: 100vh;
@@ -289,6 +273,7 @@ span{
     color: white;
     cursor: pointer;
     display: none; /* Escondido por padrão */
+    z-index: 1001;
     }
 
     @media (max-width: 768px) {
