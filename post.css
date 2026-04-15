@@ -148,3 +148,44 @@ footer a { color: white; font-weight: bold; }
     transform: translateX(-5px); /* Efeitozinho de deslocamento para a esquerda */
     text-shadow: 0 0 10px #6663a6;
 }
+
+/* Menu Hamburguer */
+    #menu-icon {
+    font-size: 3.6rem;
+    color: white;
+    cursor: pointer;
+    display: none; /* Escondido por padrão */
+}
+
+    @media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%; 
+        right: -100%; 
+        width: 250px;
+        height: auto;
+        background: rgba(22, 22, 22, 0.95);
+        border-bottom-left-radius: 2rem;
+        border-left: 3px solid #6663a6;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        transition: 0.4s ease;
+        z-index: 1000;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2.2rem;
+        margin: 1.5rem 0;
+        margin-left: 0; 
+    }
+}
