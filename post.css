@@ -1,35 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+/* --- 1. GERAL --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
     font-family: "VT323", monospace;
 }
 
-html {
-    font-size: 62.5%;
-}
+html { font-size: 62.5%; }
 
 body {
     background-color: black;
     color: white;
-    line-height: 1.6;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-header{
-    margin-top: 20px;
+/* --- 2. HEADER & NAVEGAÇÃO --- */
+header {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
-    padding: 1rem 9%;
-    background-color: transparent;
-    filter: drop-shadow(10px);
+    padding: 2rem 9%;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,123 +37,48 @@ header{
     font-weight: 800;
 }
 
+nav { display: flex; }
+
 nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
     transition: 0.3s;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
 }
 
 nav a:hover, nav a.active {
     color: #6663a6;
-    border-bottom: 2px solid #6663a6;
+    border-bottom: 3px solid #6663a6;
 }
 
- /* Estilos específicos da Página de Post */
-    .post-container {
-        flex: 1;
-        max-width: 800px; /* Largura ideal para leitura de textos */
-        margin: 0 auto;
-        padding-top: 8rem; /* Respiro para o header fixo */
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 5rem;
-    }
+#menu-icon {
+    font-size: 3.6rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+}
 
-    .post-header {
-        text-align: center;
-        margin-bottom: 2rem;
-        margin-top: 0;
-    }
-
-    .post-title {
-        font-size: 4.5rem;
-        color: #6663a6;
-        margin-top: 0;    
-        margin-bottom: 0.5rem;
-        line-height: 1.1;
-    }
-
-    .post-meta {
-        font-size: 1.8rem;
-        color: #888;
-    }
-
-    .featured-image img {
-        width: 100%;
-        border-radius: 12px;
-        margin-top: 0;
-        margin-bottom: 3rem;
-        border: 2px solid #6663a6;
-        display: block;
-    }
-
-    .post-content {
-        font-size: 2.2rem; 
-        line-height: 1.5;
-        color: #ddd;
-    }
-
-    .post-content h2 {
-        color: #6663a6;
-        font-size: 3rem;
-        margin: 3rem 0 1rem;
-    }
-
-    .post-content p {
-        margin-bottom: 2rem;
-    }
-
-    /* Estilo para imagens dentro do texto */
-    .content-image {
-        margin: 3rem 0;
-        text-align: center;
-    }
-
-    .content-image img {
-        max-width: 100%;
-        border-radius: 8px;
-    }
-
-    .image-caption {
-        font-size: 1.6rem;
-        color: #666;
-        margin-top: 1rem;
-    }
-
-    .back-link {
-        margin-top: 5rem;
-        text-align: center;
-    }
-
-    .back-link a {
-        font-size: 2rem;
-        color: #6663a6;
-        transition: 0.3s;
-    }
-
-    .back-link a:hover {
-        text-decoration: underline;
-        letter-spacing: 1px;
-    }   
-
-/* Container do Post*/
+/* --- 3. CONTEÚDO DO POST --- */
 .post-container {
+    flex: 1;
     max-width: 850px;
     margin: 0 auto;
-    padding: 10rem 5% 5rem; /* 10rem no topo é o espaço para o header */
+    padding: 12rem 5% 5rem; /* 12rem para compensar o header fixo */
 }
 
 .post-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .post-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: #6663a6;
+    line-height: 1.1;
     margin-bottom: 1rem;
-    line-height: 1.2;
 }
 
 .post-meta {
@@ -166,115 +86,111 @@ nav a:hover, nav a.active {
     color: #888;
 }
 
-/* Imagens */
 .featured-image img {
     width: 100%;
     max-height: 500px;
     object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #6663a6;
-    margin-bottom: 3rem;
+    border-radius: 12px;
+    border: 2px solid #6663a6;
+    margin-bottom: 4rem;
+    display: block;
 }
 
 .post-content {
     font-size: 2.2rem;
+    line-height: 1.6;
     color: #eee;
 }
 
 .post-content h2 {
     color: #6663a6;
-    font-size: 3rem;
-    margin: 3rem 0 1rem;
+    font-size: 3.2rem;
+    margin: 4rem 0 1.5rem;
 }
 
 .post-content p {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
-/* Footer */
-footer {
-    background: #6663a6;
-    padding: 2rem 0;
+/* Imagens internas e legendas */
+.content-image {
+    margin: 4rem 0;
     text-align: center;
-    width: 100%;
-    margin-top: 5rem;
 }
 
-footer span {
-    font-size: 1.8rem;
-    color: white;
+.content-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #333;
 }
 
-footer a { color: white; font-weight: bold; }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .post-title { font-size: 3.5rem; }
-    .post-container { padding-top: 12rem; }
+.image-caption {
+    font-size: 1.6rem;
+    color: #888;
+    margin-top: 1rem;
 }
 
-/* Voltar para página de serviços */
+/* --- 4. NAVEGAÇÃO DE VOLTA --- */
 .back-link {
-    margin-top: 5rem;
-    padding: 2rem 0;
-    border-top: 1px solid #333; /* Uma linha sutil para separar do texto */
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 1px solid #333;
     text-align: center;
 }
 
 .back-link a {
-    font-size: 2.5rem; /* Aumentado de 2rem para 2.5rem */
+    font-size: 2.5rem;
     color: #6663a6;
     font-weight: bold;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     transition: 0.3s ease;
 }
 
 .back-link a:hover {
     color: white;
-    transform: translateX(-5px); /* Efeitozinho de deslocamento para a esquerda */
+    transform: translateX(-8px);
     text-shadow: 0 0 10px #6663a6;
 }
 
-/* Menu Hamburguer */
-    #menu-icon {
-    font-size: 3.6rem;
-    color: white;
-    cursor: pointer;
-    display: none; /* Escondido por padrão */
-    z-index: 1001;
+/* --- 5. FOOTER --- */
+footer {
+    background: #6663a6;
+    padding: 2.5rem 0;
+    text-align: center;
+    margin-top: auto;
 }
 
-    @media (max-width: 768px) {
-    #menu-icon {
-        display: block;
-    }
+footer span { font-size: 1.8rem; color: white; }
+footer a { color: white; font-weight: bold; text-decoration: none; }
+
+/* --- 6. RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+    #menu-icon { display: block; }
 
     nav {
         position: absolute;
-        top: 100%; 
-        right: -100%; 
+        top: 100%; right: -100%;
         width: 250px;
-        height: auto;
-        background: rgba(22, 22, 22, 0.95);
-        border-bottom-left-radius: 2rem;
-        border-left: 3px solid #6663a6;
-        padding: 2rem;
-        display: flex;
+        background: rgba(18, 18, 18, 0.98);
         flex-direction: column;
+        padding: 2rem;
+        border-left: 3px solid #6663a6;
         transition: 0.4s ease;
-        z-index: 1000;
     }
 
-    nav.active {
-        right: 0;
-    }
+    nav.active { right: 0; }
 
     nav a {
-        display: block;
-        font-size: 2.2rem;
         margin: 1.5rem 0;
-        margin-left: 0; 
+        margin-left: 0;
+        font-size: 2.2rem;
+        border-bottom: none;
     }
+
+    .post-title { font-size: 3.5rem; }
+    .post-container { padding-top: 10rem; }
+    .post-content { font-size: 2rem; }
 }
