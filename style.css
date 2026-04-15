@@ -289,7 +289,7 @@ span{
     color: white;
     cursor: pointer;
     display: none; /* Escondido por padrão */
-}
+    }
 
     @media (max-width: 768px) {
     #menu-icon {
