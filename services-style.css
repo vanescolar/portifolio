@@ -143,6 +143,8 @@ footer {
     background: #6663a6;
     padding: 2rem 0;
     text-align: center;
+    margin-top: auto;
+    width: 100%;
 }
 
 footer span { font-size: 1.7rem; color: white; }
