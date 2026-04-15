@@ -67,17 +67,21 @@ nav a:hover, nav a.active {
 .services-container {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas automáticas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem; /* Espaço entre os cartões */
     padding: 2rem 9%;
-    justify-items: center; /* Centraliza os cards se sobrarem */
+    justify-items: center;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+    padding-left: 9%;
+    padding-right: 9%;
 }
 
 /* O Card Branco */
 .card {
     background-color: #f5f5f5; /* Cor clara do card */
     border-radius: 2rem;
-    overflow: hidden; /* Corta a imagem/fundo para seguir o arredondamento */
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
     width: 100%;
