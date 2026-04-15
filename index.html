@@ -12,6 +12,8 @@
     <header>
         <a href="#" class="logo">VANE</a>
 
+              <div id="menu-icon">&#9776;</div>
+
         <nav>
             <a href="index.html" class="active"> Início</a>
             <a href="services.html" >Serviços</a>
@@ -41,6 +43,21 @@
             <span> Criado por <a href="#"> Vane</a> | &#169; 2026 Todos os direitos reservados</span>
         </div>
     </footer>
+
+    // menu hamburguer
+    <script>
+        let menuIcon = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('#navbar');
+
+        menuIcon.onclick = () => {
+            navbar.classList.toggle('active');
+        };
+
+        // Fecha o menu ao clicar em um link
+        window.onscroll = () => {
+            navbar.classList.remove('active');
+        };
+    </script>
 
 </body>
 </html>
