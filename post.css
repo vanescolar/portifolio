@@ -139,17 +139,7 @@ nav a:hover, nav a.active {
     .back-link a:hover {
         text-decoration: underline;
         letter-spacing: 1px;
-    }
-
-    /* Ajuste Responsivo para o Post */
-    @media (max-width: 768px) {
-        .post-title {
-            font-size: 3.5rem;
-        }
-        .post-container {
-            padding-top: 12rem;
-        }
-    }
+    }   
 
 /* Container do Post*/
 .post-container {
@@ -218,7 +208,7 @@ footer a { color: white; font-weight: bold; }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .post-title { font-size: 3rem; }
+    .post-title { font-size: 3.5rem; }
     .post-container { padding-top: 12rem; }
 }
 

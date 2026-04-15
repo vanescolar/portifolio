@@ -267,14 +267,13 @@ span{
             color: whitesmoke;
         }
 
-    /* Menu Hamburguer */
+/* Menu Hamburguer */
     #menu-icon {
     font-size: 3.6rem;
     color: white;
     cursor: pointer;
     display: none; /* Escondido por padrão */
-    z-index: 1001;
-    }
+}
 
     @media (max-width: 768px) {
     #menu-icon {
