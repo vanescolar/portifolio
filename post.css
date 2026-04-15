@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +19,6 @@ body {
     color: white;
     line-height: 1.6;
     min-height: 100vh;
-    /* Removido o Flexbox daqui para evitar que o conteúdo centralize verticalmente */
 }
 
 /* Header Fixo */
@@ -30,7 +28,7 @@ header {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fundo sólido para não confundir com o texto */
+    background-color: rgba(0, 0, 0, 0.9); 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +53,7 @@ nav a:hover, nav a.active {
     border-bottom: 2px solid #6663a6;
 }
 
-/* Container do Post - O segredo está aqui */
+/* Container do Post*/
 .post-container {
     max-width: 850px;
     margin: 0 auto;
@@ -126,6 +124,7 @@ footer a { color: white; font-weight: bold; }
     .post-container { padding-top: 12rem; }
 }
 
+/* Voltar para página de serviços */
 .back-link {
     margin-top: 5rem;
     padding: 2rem 0;
