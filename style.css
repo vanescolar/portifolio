@@ -34,7 +34,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo{
@@ -273,6 +273,7 @@ span{
     color: white;
     cursor: pointer;
     display: none; /* Escondido por padrão */
+    z-index: 1001;
 }
 
     @media (max-width: 768px) {

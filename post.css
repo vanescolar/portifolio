@@ -21,14 +21,15 @@ body {
     min-height: 100vh;
 }
 
-/* Header Fixo */
-header {
+header{
+    margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
-    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -242,6 +243,7 @@ footer a { color: white; font-weight: bold; }
     color: white;
     cursor: pointer;
     display: none; /* Escondido por padrão */
+    z-index: 1001;
 }
 
     @media (max-width: 768px) {
